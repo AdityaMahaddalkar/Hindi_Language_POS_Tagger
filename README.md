@@ -11,13 +11,31 @@ A simple rule-based engine for highlighting Parts Of Speech (POS) tags of words 
 
 ---
 
+### Installation
+
+`pip install -e .`
+
+---
+
+### Usage
+
+- For tagging a single word : `htag word -w 'hindi_word'`
+- For tagging all words in a document : `htag document -p 'path/to/document'`
+- For usage info : `htag -h
+`
+---
+
 ### TODO:
 
 - Develop a CLI application for users to input their own stream of Hindi words (stdin or file)
 - Increase the size and accuracy of rule table
 - Dockerize the container for portability
+- Add codecoverage  
+
+---
 
 ### Notes
 
 - Running the jupyter notebook requires dev requirements which are not specified in the requirements_dev.txt
 - The notebook is added just for reference
+- While tagging words in a document, it is preferred that you supply an output stream after command `htag document -p 'path/to/document' > path/to/outputfile`

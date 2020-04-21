@@ -33,7 +33,7 @@ setup(
     description="A simple rule based Hindi POS Tagger",
     entry_points={
         'console_scripts': [
-            'hindi_pos_tagger=hindi_pos_tagger.cli:main',
+            'htag=hindi_pos_tagger.cli:main',
         ],
     },
     install_requires=requirements,
