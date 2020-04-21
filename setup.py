@@ -14,7 +14,7 @@ requirements = ['pandas' ]
 
 setup_requirements = ['pytest-runner', ]
 
-test_requirements = ['pytest>=3', ]
+test_requirements = ['pytest>=3', 'codecov']
 
 setup(
     author="Aditya Mahaddalkar",
