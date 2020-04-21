@@ -14,4 +14,4 @@ install:
 # Command to run tests, e.g. python setup.py test
 script:
   - pytest tests/
-  - codecov -t e27add6e-391d-4ccf-9f67-7b5bf774b7d5
+  - pytest --cov=./
