@@ -10,11 +10,11 @@ with open('README.md') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['pandas', 'pytest-cov']
+requirements = ['pandas']
 
 setup_requirements = ['pytest-runner', ]
 
-test_requirements = ['pytest>=3', 'pytest-cov']
+test_requirements = ['pytest>=3']
 
 setup(
     author="Aditya Mahaddalkar",
