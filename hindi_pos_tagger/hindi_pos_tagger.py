@@ -3,6 +3,7 @@ import os
 
 from hindi_pos_tagger.utils.rule_scrapper import Scrapper
 
+
 class Main:
     def __init__(self):
         self.scrapper = Scrapper()
@@ -19,15 +20,16 @@ class Main:
         assert os.path.exists(document_path) == True
 
         try:
-            with open(document_path) as document:
+            with open(document_path, encoding="utf-8") as document:
                 file = document.readlines()
 
             for i, line in enumerate(file):
                 tokens = line.split()
                 for token in tokens:
-                    print(f'{token} {self.scrapper.get_pos_tag(token)}', end=' ')
-
-                    print()
+                    pos_tag = self.scrapper.get_pos_tag(token)
+                    if pos_tag != 'Unk':
+                        print(
+                            f'({token}, {self.scrapper.get_pos_tag(token)})', end='\t')
             return True
         except Exception as e:
             print(f'Occurred Exception {e} in Main.process_document function')
